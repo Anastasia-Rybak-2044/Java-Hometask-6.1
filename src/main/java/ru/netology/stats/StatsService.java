@@ -38,23 +38,23 @@ public class StatsService {
 
     public int calculateSumsBelowAverage (int [] sales){
         int sumBelowAverage = calculateSumAverage(sales);
-        int n = 0;
+        int sum1 = 0;
         for (int i = 0; i < 12; i++) {
             if (sales[i] < sumBelowAverage) {
-                n++;
+                sum1++;
             }
         }
-        return n;
+        return sum1;
     }
 
     public int calculateSumsAboveAverage (int [] sales){
         int sumAboveAverage = calculateSumAverage(sales);
-        int n = 0;
+        int sum2 = 0;
         for (int i = 0; i < 12; i++) {
             if (sales[i] > sumAboveAverage) {
-                n++;
+                sum2++;
             }
         }
-        return n;
+        return sum2;
     }
 }
